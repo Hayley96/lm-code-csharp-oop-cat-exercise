@@ -5,6 +5,11 @@ namespace OopCatExercise.Tests;
 
 public class CatTests
 {
+    [SetUp]
+    public void Setup()
+    {
+
+    }
     [Test]
     public void DomesticCat_Should_Be_Awake_By_Default()
     {
@@ -69,5 +74,12 @@ public class CatTests
     {
         DomesticCat domesticCat = new();
         domesticCat.Eat().Should().Be("Purrrrrrr");
+    }
+
+    [Test]
+    public void DomesticCat_Should_Make_Sleep_Is_Called()
+    {
+        DomesticCat domesticCat = new();
+        domesticCat.Sleep().Should().Be("dreaming");
     }
 }
